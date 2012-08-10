@@ -25,6 +25,8 @@
 		43C91D1D11EB963600F31FAE /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43C91D1C11EB963600F31FAE /* MainWindow-iPad.xib */; };
 		43D1DEF011D5CDD200550D75 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D1DEEF11D5CDD200550D75 /* SystemConfiguration.framework */; };
 		43EF406E11D3FFF800B1F700 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EF406D11D3FFF800B1F700 /* Security.framework */; };
+		573BC15A15D51656008555F9 /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 573BC15915D51656008555F9 /* JSONKit.h */; };
+		573BC15B15D51656008555F9 /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 573BC15915D51656008555F9 /* JSONKit.h */; };
 		7A0F91D0156B9FF2009CB40A /* SHKDelicious.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F91CE156B9FF2009CB40A /* SHKDelicious.m */; };
 		7A0F91D5156BA2A0009CB40A /* SHKCustomFormFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A536B111DBE3B9004A1712 /* SHKCustomFormFieldCell.m */; };
 		7A0F91D6156BA2A0009CB40A /* SHKCustomFormControllerLargeTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2BD53153431390042EB86 /* SHKCustomFormControllerLargeTextField.m */; };
@@ -469,7 +471,7 @@
 		43C91DF411EBAE4800F31FAE /* SHKTumblr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHKTumblr.m; sourceTree = "<group>"; };
 		43D1DEEF11D5CDD200550D75 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		43EF406D11D3FFF800B1F700 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		57BF3D8715A080D9008AAAEA /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		573BC15915D51656008555F9 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		7A0F91CD156B9FF2009CB40A /* SHKDelicious.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SHKDelicious.h; path = Delicious/SHKDelicious.h; sourceTree = "<group>"; };
 		7A0F91CE156B9FF2009CB40A /* SHKDelicious.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SHKDelicious.m; path = Delicious/SHKDelicious.m; sourceTree = "<group>"; };
 		7A0F9246156BA2A0009CB40A /* libShareKitNoSubmodules.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libShareKitNoSubmodules.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -947,7 +949,7 @@
 		43A5367B11DBE3B9004A1712 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				F92EF477148E8F1A0070F913 /* JSONKit */,
+				573BC15815D51656008555F9 /* JSONKit */,
 				43A5367C11DBE3B9004A1712 /* Keychain */,
 				43A5367F11DBE3B9004A1712 /* OAuth */,
 				43A536A411DBE3B9004A1712 /* SHKRequest.h */,
@@ -1208,6 +1210,15 @@
 			path = Tumblr;
 			sourceTree = "<group>";
 		};
+		573BC15815D51656008555F9 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				573BC15915D51656008555F9 /* JSONKit.h */,
+			);
+			name = JSONKit;
+			path = Submodules/JSONKit;
+			sourceTree = SOURCE_ROOT;
+		};
 		7A0F91CB156B9FCE009CB40A /* Delicious */ = {
 			isa = PBXGroup;
 			children = (
@@ -1399,15 +1410,6 @@
 			path = "Logout of All Services";
 			sourceTree = "<group>";
 		};
-		F92EF477148E8F1A0070F913 /* JSONKit */ = {
-			isa = PBXGroup;
-			children = (
-				57BF3D8715A080D9008AAAEA /* JSONKit.h */,
-			);
-			name = JSONKit;
-			path = ../../../../Submodules/JSONKit;
-			sourceTree = "<group>";
-		};
 		FA5AA3B4149625010064DB24 /* Vkontakte */ = {
 			isa = PBXGroup;
 			children = (
@@ -1442,6 +1444,7 @@
 				7ABCDBAA1577528B003BBFFD /* SHKFormFieldCellSwitch.h in Headers */,
 				7ABCDBB1157757D1003BBFFD /* SHKFormFieldCellOptionPicker.h in Headers */,
 				7A4CAA181577BEFA0010E6B3 /* SHKFormFieldCell_PrivateProperties.h in Headers */,
+				573BC15B15D51656008555F9 /* JSONKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1461,6 +1464,7 @@
 				7ABCDBA91577528B003BBFFD /* SHKFormFieldCellSwitch.h in Headers */,
 				7ABCDBB0157757D1003BBFFD /* SHKFormFieldCellOptionPicker.h in Headers */,
 				7A4CAA171577BEFA0010E6B3 /* SHKFormFieldCell_PrivateProperties.h in Headers */,
+				573BC15A15D51656008555F9 /* JSONKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
