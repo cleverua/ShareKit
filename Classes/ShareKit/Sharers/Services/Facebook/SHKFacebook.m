@@ -237,7 +237,14 @@ static NSString *const kSHKFacebookUserInfo =@"kSHKFacebookUserInfo";
 	else if (item.shareType == SHKShareTypeText && item.text)
 	{
 		[params setObject:item.text forKey:@"message"];
-        [[SHKFacebook facebook] requestWithGraphPath:@"me/feed"
+		NSString *pictureURI = self.item.facebookURLSharePictureURI;
+		if (pictureURI)
+			[params setObject:pictureURI forKey:@"picture"];
+
+		NSString *description = self.item.facebookURLShareDescription;
+		if (description)
+			[params setObject:description forKey:@"description"];
+	[[SHKFacebook facebook] requestWithGraphPath:@"me/feed"
                                            andParams:params
                                        andHttpMethod:@"POST"
                                          andDelegate:self];
